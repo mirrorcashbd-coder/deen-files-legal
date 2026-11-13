@@ -75,7 +75,7 @@
     </a>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Effective 12 November 2026</p>
+    <p class="updated">Effective 13 November 2026</p>
 
     <p class="note">
       Deen Files is a client for your own Telegram account. It does not run a server and does not
@@ -85,85 +85,115 @@
 
     <h2>1. Who we are</h2>
     <p>
-      Deen Files ("the app", "we") is an Android application by Deenmate that lets you keep files in
-      a private Telegram channel and browse them like a cloud drive. The app is distributed through
-      Google Play and other app stores.
+      Deen Files ("the app", "we") is an Android file manager and cloud drive by Deenmate.
+      It lets you browse your phone storage and back up your files to a private Telegram
+      channel or to cloud accounts you configure yourself. The app is distributed on
+      Google Play and other stores. The developer is Deenmate ("we"), the contact address
+      is shown at the bottom of this page.
     </p>
 
     <h2>2. What the app handles</h2>
     <ul>
-      <li><strong>Telegram login data.</strong> Your phone number and login code are sent directly
-        to Telegram to sign in. The app does not send them anywhere else.</li>
-      <li><strong>Your files.</strong> Photos, videos, documents and folders you choose to upload
-        are sent to Telegram and stored in your private channel. If you turn on encryption, file
-        contents, names, captions and the folder tree are encrypted on your device before they
-        leave it.</li>
-      <li><strong>App data on your device.</strong> A local index, settings, thumbnails and caches
-        are stored on your phone. The Telegram session and local database are protected with keys
-        held by Android Keystore.</li>
-      <li><strong>No advertising or analytics.</strong> The app contains no advertising SDK, no
-        analytics SDK and no third-party tracking.</li>
+      <li><strong>Telegram login data.</strong> Your phone number and login code are sent
+        directly to Telegram over an encrypted connection to sign in. The app does not send
+        your phone number, code or session to us or to any other party.</li>
+      <li><strong>Your files.</strong> Photos, videos, documents, app packages, archives and
+        whole folders you choose to back up are stored in the private Telegram channel you
+        select, or in a cloud account you configure yourself (Cloudflare R2, S3, FTP, WebDAV
+        or Google Drive). If you enable encryption, file contents, names, captions and the
+        folder tree are encrypted on your device before they leave it.</li>
+      <li><strong>Local data on your device.</strong> The app keeps an index of your files,
+        thumbnails, cache, your settings and session in an on-device database. The Telegram
+        session and database are protected with keys held by Android Keystore.</li>
+      <li><strong>No accounts with us, no ads, no analytics, no tracking.</strong> The app has
+        no Deenmate account system, no advertising SDK, no analytics SDK and no third-party
+        tracking SDK. We never receive your files and can never read them.</li>
     </ul>
 
     <h2>3. Where your data goes</h2>
     <p>
-      Your files and account data go to <strong>Telegram</strong>, the storage provider you chose.
-      Telegram's own privacy policy applies to data stored on its servers:
-      <a href="https://telegram.org/privacy" rel="noopener" target="_blank">telegram.org/privacy</a>.
-      The developer of Deen Files has no server, no database of your files and no way to read your
-      channel or your encryption keys.
+      Your files and account data go only to the storage you point the app at:
+    </p>
+    <ul>
+      <li><strong>Telegram</strong> — the files you back up live in your own private channel.
+        Telegram's privacy policy applies: <a href="https://telegram.org/privacy" rel="noopener" target="_blank">telegram.org/privacy</a>.</li>
+      <li><strong>Cloud accounts you configure yourself</strong> — Cloudflare R2, Amazon S3,
+        FTP, WebDAV or Google Drive receive the files you upload to them. Each provider's
+        terms and privacy policy applies. We do not receive them.</li>
+      <li><strong>Android OS storage</strong> — the app reads/writes files on your device only
+        to show them, copy/move/rename them, and to restore or back up what you asked for.</li>
+    </ul>
+    <p>
+      The developer of Deen Files runs no server that holds your files, no database of your
+      files, and has no way to read your channel or your cloud account data.
     </p>
 
     <h2>4. Permissions the app asks for</h2>
     <ul>
-      <li><strong>Photos and videos</strong> — to back up the media you select.</li>
-      <li><strong>All files access</strong> — optional, and only if you enable automatic backup of
-        folders such as Downloads or Documents. Without it you can still upload files manually.</li>
+      <li><strong>Photos and videos</strong> — to back up media you select.</li>
+      <li><strong>All files access (MANAGE_EXTERNAL_STORAGE)</strong> — optional, and only if
+        you enable automatic backup of whole folders such as Downloads or Documents. Without
+        it you can still upload files manually. You can revoke it at any time in system
+        settings and the app still works for manual uploads.</li>
       <li><strong>Notifications</strong> — to show transfer and backup progress.</li>
-      <li><strong>Ignore battery optimisation</strong> — optional; keeps long backups running.</li>
       <li><strong>Biometric / device credential</strong> — optional app lock.</li>
+      <li><strong>Boot completed</strong> — so backups can resume after a reboot when you
+        enabled scheduled backup.</li>
+      <li><strong>Foreground service (data sync)</strong> — to keep long uploads/downloads
+        running with an ongoing notification.</li>
     </ul>
     <p>You can deny any optional permission and still use the app.</p>
 
-    <h2>5. Sharing</h2>
-    <p>
-      We do not sell, rent or share your data. The only third party involved is Telegram, which
-      stores the files you upload. There are no advertising networks, analytics providers or data
-      brokers in the app.
-    </p>
+    <h2>5. What we do not collect and do not do</h2>
+    <ul>
+      <li>We do not sell, rent or share your data, and we never see it.</li>
+      <li>We do not create accounts or profiles on our servers — there is no server.</li>
+      <li>We do not use cookies, analytics, fingerprinting, crash reporting that contains
+        file data, or advertising networks.</li>
+      <li>We do not access your contacts, location, microphone, camera or messages — none
+        of those permissions are used.</li>
+    </ul>
 
     <h2>6. Retention and deletion</h2>
     <ul>
-      <li>Delete a file in the app to remove it from your channel (and from Telegram, subject to
-        Telegram's retention rules).</li>
-      <li>Delete the drive or the private channel in Telegram to remove everything stored there.</li>
-      <li>Log out or uninstall the app to remove the local session, index, thumbnails and caches
-        from your phone.</li>
-      <li>Encryption keys live on your device. If you lose them, the encrypted data cannot be
+      <li>Delete a file in the app to remove it from your Telegram channel or cloud account
+        (subject to that provider's retention rules).</li>
+      <li>Delete a drive or channel inside Telegram to remove everything stored there.</li>
+      <li>Sign out and delete the drive from within the app, or uninstall the app, to remove
+        the local session, index, thumbnails and caches from your phone.</li>
+      <li>Encryption keys live on your device. If you lose them, encrypted data cannot be
         recovered — this is intentional.</li>
     </ul>
 
-    <h2>7. Children</h2>
+    <h2>7. Your rights</h2>
     <p>
-      Deen Files is not directed to children under 13. You must have a Telegram account and be old
-      enough to use Telegram under its terms.
+      Because nothing is stored on developer servers, all your data stays under your control.
+      You may access, export, delete or stop sharing any of it at any time, using the app
+      controls or the storage provider's own settings. For anything else, contact us through
+      the address below and we will help or point you to the right place.
     </p>
 
-    <h2>8. Security</h2>
+    <h2>8. Children</h2>
     <p>
-      The app uses Android Keystore to protect the local database and Telegram session. Optional
-      AES-256-GCM encryption protects file bodies, names, captions and the folder tree before
-      upload. No method of storage is perfectly secure, so keep your device lock and any exported
-      encryption key safe.
+      Deen Files is not directed to children under 13. You must have a Telegram account (or a
+      cloud account) and be old enough under the terms of that provider to use this app.
     </p>
 
-    <h2>9. Changes</h2>
+    <h2>9. Security</h2>
+    <p>
+      The app uses Android Keystore to protect the Telegram session and the on-device
+      database. Optional AES-256-GCM encryption protects file bodies, names and the folder
+      tree before upload. No method of storage is perfectly secure, so keep your device lock
+      and any exported encryption key safe.
+    </p>
+
+    <h2>10. Changes</h2>
     <p>
       If this policy changes, the new version will be published at this address with a new
       effective date. Continued use after a change means you accept the updated policy.
     </p>
 
-    <h2>10. Contact</h2>
+    <h2>11. Contact</h2>
     <p>
       Questions or data requests:
       <a href="mailto:support@deenmate.com">support@deenmate.com</a>
